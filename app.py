@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-app.config["UPLOAD_FOLDER"] = "static/"
+app.config["UPLOAD_FOLDER"] = "/Documents/"
 
 @app.route('/')
 def upload_file():
