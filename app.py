@@ -1,10 +1,13 @@
+'''
+https://medium.com/featurepreneur/uploading-files-using-flask-ec9fb4c7d438
+'''
 
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-app.config["UPLOAD_FOLDER"] = "/Documents/"
+app.config["UPLOAD_FOLDER"] = "/data/"
 
 @app.route('/')
 def upload_file():
