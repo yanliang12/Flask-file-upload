@@ -16,6 +16,8 @@ def save_file():
     if request.method == 'POST':
         f = request.files['file']
         filename = secure_filename(f.filename)
+        print(filename)
+        print(f)
 
         f.save(app.config['UPLOAD_FOLDER'] + filename)
 
@@ -27,4 +29,3 @@ def save_file():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug = True)
-
